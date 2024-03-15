@@ -9,7 +9,6 @@ public class Meny implements ActionListener {
     JPanel midBottomPanel = new JPanel();
     JPanel bottomPanel = new JPanel();
     JButton threeXThreeButton = new JButton();
-    JButton sixXSixButton = new JButton();
     JButton exitButton = new JButton();
     JLabel ticTacToeLabel = new JLabel();
     JFrame menuFrame = new JFrame();
@@ -18,26 +17,19 @@ public class Meny implements ActionListener {
     Meny() {
 
 
-        threeXThreeButton.setBounds(300, 50, 200, 100);
+        threeXThreeButton.setBounds(300, 150, 200, 100);
         threeXThreeButton.addActionListener(this);
         threeXThreeButton.setText("3x3");
         threeXThreeButton.setFont(new Font("Arial Black", Font.PLAIN, 40));
         threeXThreeButton.setHorizontalTextPosition(JButton.CENTER);
-        threeXThreeButton.setBackground(new Color(150,200,255));
-
-        sixXSixButton.setBounds(300, 50, 200, 100);
-        sixXSixButton.addActionListener(this);
-        sixXSixButton.setText("6x6");
-        sixXSixButton.setFont(new Font("Arial Black", Font.PLAIN, 40));
-        sixXSixButton.setHorizontalTextPosition(JButton.CENTER);
-        sixXSixButton.setBackground(new Color(160, 215, 245));
+        threeXThreeButton.setBackground(new Color(39, 174, 96 ));
 
         exitButton.setBounds(300, 50, 200, 100);
         exitButton.addActionListener(this);
         exitButton.setText("EXIT");
         exitButton.setFont(new Font("Arial Black", Font.PLAIN, 40));
         exitButton.setHorizontalTextPosition(JButton.CENTER);
-        exitButton.setBackground(new Color(150, 200, 255));
+        exitButton.setBackground(new Color(20, 143, 119));
 
         ticTacToeLabel.setText("Tic Tac Toe");
         ticTacToeLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -46,22 +38,21 @@ public class Meny implements ActionListener {
         ticTacToeLabel.setFont(new Font("Sneakerhead BTN Shadow", Font.PLAIN, 80));
 
         topPanel.setBounds(0, 0, 800, 200);
-        topPanel.setBackground(new Color(150, 200, 255));
+        topPanel.setBackground(new Color(39, 174, 96 ));
         topPanel.setLayout(null);
         topPanel.add(ticTacToeLabel);
 
-        midTopPanel.setBounds(0, 200, 800, 200);
-        midTopPanel.setBackground(new Color(160, 215, 245));
+        midTopPanel.setBounds(0, 200, 800, 400);
+        midTopPanel.setBackground(new Color(20, 143, 119));
         midTopPanel.setLayout(null);
         midTopPanel.add(threeXThreeButton);
 
-        midBottomPanel.setBounds(0, 400, 800, 200);
+        /*midBottomPanel.setBounds(0, 400, 800, 200);
         midBottomPanel.setBackground(new Color(150, 200, 255));
-        midBottomPanel.setLayout(null);
-        midBottomPanel.add(sixXSixButton);
+        midBottomPanel.setLayout(null);*/
 
         bottomPanel.setBounds(0, 600, 800, 200);
-        bottomPanel.setBackground(new Color(160, 215, 245));
+        bottomPanel.setBackground(new Color(39, 174, 96 ));
         bottomPanel.setLayout(null);
         bottomPanel.add(exitButton);
 
@@ -84,10 +75,6 @@ public class Meny implements ActionListener {
         if (e.getSource() == threeXThreeButton) {
             menuFrame.dispose();
             Three threeXThree = new Three();
-        }
-        if (e.getSource() == sixXSixButton) {
-            menuFrame.dispose();
-            Six sixXSix = new Six();
         }
         if (e.getSource() == exitButton) {
             menuFrame.dispose();
